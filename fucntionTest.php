@@ -60,7 +60,7 @@ echo "<h4>Numbers of student scored greater or equal 80 : ".$count."</h4>";
             }else if($values[$index]>=50 && $values[$index]<=69){
                 echo "<h3>Show Grade : C+</h3>";
             }else if($values[$index]<50){
-                echo "<h3>Show Grade : C+</h3>";
+                echo "<h3>Show Grade : F</h3>";
             }
 
           }
