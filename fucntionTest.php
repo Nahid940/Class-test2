@@ -3,9 +3,9 @@
     $file=('test.txt');
     $readFile=fopen($file,'r');
     $string=file_get_contents($file);
-    $myArray=explode("\n",$string);
+    $myArray=explode(PHP_EOL,$string);
+    
 
- 
 
 //loop to divide the $myarray into two array like $value, $student_id
    for($i=0;$i<sizeof($myArray);$i++){
@@ -49,9 +49,9 @@ echo "<h4>Numbers of student scored greater or equal 80 : ".$count."</h4>";
     <?php 
     
         if(isset($_POST['submit'])){
-        if (in_array($_POST['id'],$student_id) || in_array($_POST['id'].' ',$student_id))
+        if (in_array($_POST['id'],$student_id))
           {
-            $index= array_search($_POST['id'].' ',$student_id);
+            $index= array_search($_POST['id'],$student_id);
             //echo "<h3>Show Grade : ".$values[$index]."</h3>";
             if($values[$index]>=90){
                 echo "<h3>Show Grade : A+</h3>";
